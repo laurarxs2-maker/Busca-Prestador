@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  administration: write
 
 concurrency:
   group: pages
@@ -36,10 +38,32 @@ jobs:
           VITE_SHEETS_TAB: ${{ secrets.VITE_SHEETS_TAB }}
           VITE_SHEETS_WEBAPP_URL: ${{ secrets.VITE_SHEETS_WEBAPP_URL }}
 
-      # Publica a pasta dist/ na branch gh-pages (só arquivos buildados).
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+
+      # Aponta o GitHub Pages para publicar a branch gh-pages (build), não a main (código-fonte).
+      - name: Configure Pages source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.repos.updateInformationAboutPagesSite({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              build_type: 'legacy',
+              source: { branch: 'gh-pages', path: '/' },
+            });
+            core.info('Pages configurado: branch gh-pages / root');
+
+      - name: Trigger Pages rebuild
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.repos.requestPagesBuild({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            core.info('Rebuild do Pages solicitado.');
