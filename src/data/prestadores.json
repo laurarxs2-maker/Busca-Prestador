@@ -1,0 +1,162 @@
+[
+  {
+    "nome": "Hospital Israelita Albert Einstein",
+    "uf": "SP",
+    "telefones": "(11) 2151-1233 / (11) 2151-1234",
+    "whatsapp": "(11) 99999-0001",
+    "tipoAtendimento": "CHECK-UP",
+    "especialidade": "CHECK-UP",
+    "unidade": "Jardins, Morumbi, Alphaville",
+    "obs": "Ramal direto: 8540"
+  },
+  {
+    "nome": "Fleury Medicina e Saúde",
+    "uf": "SP",
+    "telefones": "(11) 5014-7700",
+    "whatsapp": "(11) 5014-7704",
+    "tipoAtendimento": "EXAMES",
+    "especialidade": "ANÁLISES CLÍNICAS",
+    "unidade": "Itaim, Higienópolis, Vila Mariana, Paraíso",
+    "obs": "Atendimento Grupo Whats"
+  },
+  {
+    "nome": "Hospital Sírio-Libanês",
+    "uf": "SP",
+    "telefones": "(11) 3394-0200",
+    "whatsapp": "",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "ONCOLOGIA",
+    "unidade": "Bela Vista, Itaim",
+    "obs": "Agendamento somente por telefone"
+  },
+  {
+    "nome": "Hospital Alemão Oswaldo Cruz",
+    "uf": "SP",
+    "telefones": "(11) 3549-1000",
+    "whatsapp": "(11) 98888-1212",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "CARDIOLOGIA",
+    "unidade": "Paulista, Vergueiro",
+    "obs": ""
+  },
+  {
+    "nome": "Clínica Podológica Passo Firme",
+    "uf": "SP",
+    "telefones": "(11) 4002-8922",
+    "whatsapp": "(11) 97777-3344",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "PODOLOGIA",
+    "unidade": "Tatuapé, Santana",
+    "obs": "Atende convênios"
+  },
+  {
+    "nome": "Laboratório Delboni Auriemo",
+    "uf": "SP",
+    "telefones": "(11) 3047-4488",
+    "whatsapp": "",
+    "tipoAtendimento": "EXAMES",
+    "especialidade": "ANÁLISES CLÍNICAS",
+    "unidade": "Pinheiros, Moema, Tatuapé",
+    "obs": "Coleta domiciliar disponível"
+  },
+  {
+    "nome": "Hospital Samaritano Higienópolis",
+    "uf": "SP",
+    "telefones": "(11) 3821-5300",
+    "whatsapp": "(11) 96666-7788",
+    "tipoAtendimento": "MEDICAÇÃO",
+    "especialidade": "ONCOLOGIA",
+    "unidade": "Higienópolis",
+    "obs": "Centro de infusão - ramal 2210"
+  },
+  {
+    "nome": "CDB Diagnósticos",
+    "uf": "SP",
+    "telefones": "(11) 3003-2030",
+    "whatsapp": "(11) 95555-1010",
+    "tipoAtendimento": "EXAMES",
+    "especialidade": "IMAGEM",
+    "unidade": "Santo Amaro, Tatuapé, Mooca",
+    "obs": ""
+  },
+  {
+    "nome": "Rede D'Or São Luiz - Itaim",
+    "uf": "SP",
+    "telefones": "(11) 3155-0200",
+    "whatsapp": "(11) 94444-2020",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "ORTOPEDIA",
+    "unidade": "Itaim, Morumbi, Jabaquara",
+    "obs": "Pronto atendimento 24h"
+  },
+  {
+    "nome": "Clínica São Vicente da Gávea",
+    "uf": "RJ",
+    "telefones": "(21) 2529-4422",
+    "whatsapp": "(21) 99888-1122",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "CARDIOLOGIA",
+    "unidade": "Gávea, Botafogo, Barra da Tijuca",
+    "obs": "Estacionamento conveniado"
+  },
+  {
+    "nome": "Laboratório Sérgio Franco",
+    "uf": "RJ",
+    "telefones": "(21) 4002-2727",
+    "whatsapp": "(21) 99777-3030",
+    "tipoAtendimento": "EXAMES",
+    "especialidade": "ANÁLISES CLÍNICAS",
+    "unidade": "Botafogo, Copacabana, Tijuca, Barra da Tijuca",
+    "obs": "Resultados online"
+  },
+  {
+    "nome": "Hospital Copa D'Or",
+    "uf": "RJ",
+    "telefones": "(21) 2545-3600",
+    "whatsapp": "",
+    "tipoAtendimento": "CHECK-UP",
+    "especialidade": "CHECK-UP",
+    "unidade": "Copacabana",
+    "obs": "Programa de check-up executivo"
+  },
+  {
+    "nome": "Clínica Dermatológica Pele Viva",
+    "uf": "RJ",
+    "telefones": "(21) 3030-7070",
+    "whatsapp": "(21) 99666-4040",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "DERMATOLOGIA",
+    "unidade": "Ipanema, Leblon",
+    "obs": ""
+  },
+  {
+    "nome": "Instituto de Oftalmologia Visão Clara",
+    "uf": "SP",
+    "telefones": "(11) 3262-1500",
+    "whatsapp": "(11) 93333-5050",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "OFTALMOLOGIA",
+    "unidade": "Paulista, Itaim, Alphaville",
+    "obs": "Exames no mesmo dia"
+  },
+  {
+    "nome": "Centro Pediátrico Bem Crescer",
+    "uf": "SP",
+    "telefones": "(11) 3812-9090",
+    "whatsapp": "(11) 92222-6060",
+    "tipoAtendimento": "CONSULTA",
+    "especialidade": "PEDIATRIA",
+    "unidade": "Perdizes, Pompeia",
+    "obs": "Atende grupo Whats"
+  },
+  {
+    "nome": "Clínica da Mulher Viva Saúde",
+    "uf": "RJ",
+    "telefones": "(21) 2222-8080",
+    "whatsapp": "(21) 99555-7070",
+    "tipoAtendimento": "CHECK-UP",
+    "especialidade": "GINECOLOGIA",
+    "unidade": "Barra da Tijuca, Recreio",
+    "obs": ""
+  }
+]
