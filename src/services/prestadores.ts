@@ -38,8 +38,14 @@ export async function getPrestadores(): Promise<Prestador[]> {
     return rows.map(normalizeRaw);
   }
 
+  // Em produção, não usar mock silenciosamente — força configurar a API key no deploy.
+  if (import.meta.env.PROD) {
+    throw new Error(
+      'Planilha não configurada: adicione VITE_SHEETS_API_KEY nos Secrets do GitHub e rode o deploy novamente.',
+    );
+  }
+
   const data = rawData as PrestadorRaw[];
-  // Simula latência de rede para a UI já lidar com estado de carregamento.
   await new Promise((resolve) => setTimeout(resolve, 250));
   return data.map(normalizeRaw);
 }
