@@ -7,8 +7,6 @@ interface ImportMetaEnv {
   readonly VITE_SHEETS_ID?: string;
   /** Nome da aba/guia. Default: "Página1". */
   readonly VITE_SHEETS_TAB?: string;
-  /** URL do Apps Script Web App (/exec) usado para gravar novos prestadores. */
-  readonly VITE_SHEETS_WEBAPP_URL?: string;
 }
 
 interface ImportMeta {

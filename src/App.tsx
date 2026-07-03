@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Loader2, SearchX } from 'lucide-react';
-import { Hero, type View } from './components/Hero';
+import { Hero } from './components/Hero';
 import { Filters } from './components/Filters';
 import { PrestadorCard } from './components/PrestadorCard';
-import { NovoPrestadorForm } from './components/NovoPrestadorForm';
 import { getPrestadores } from './services/prestadores';
 import {
   EMPTY_FILTERS,
@@ -14,7 +13,6 @@ import {
 import type { Prestador } from './types/prestador';
 
 export default function App() {
-  const [view, setView] = useState<View>('buscar');
   const [prestadores, setPrestadores] = useState<Prestador[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -60,17 +58,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen pb-16">
-      <Hero
-        view={view}
-        onViewChange={setView}
-        search={filters.search}
-        onSearchChange={(v) => handleChange({ search: v })}
-      />
+      <Hero search={filters.search} onSearchChange={(v) => handleChange({ search: v })} />
 
-      {view === 'novo' ? (
-        <NovoPrestadorForm onSaved={() => void load()} />
-      ) : (
-        <main className="mx-auto mt-8 max-w-5xl px-4">
+      <main className="mx-auto mt-8 max-w-5xl px-4">
         <Filters
           filters={filters}
           options={options}
@@ -110,15 +100,14 @@ export default function App() {
           </div>
         )}
 
-          {!loading && !error && resultados.length > 0 && (
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {resultados.map((p) => (
-                <PrestadorCard key={p.id} prestador={p} />
-              ))}
-            </div>
-          )}
-        </main>
-      )}
+        {!loading && !error && resultados.length > 0 && (
+          <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {resultados.map((p) => (
+              <PrestadorCard key={p.id} prestador={p} />
+            ))}
+          </div>
+        )}
+      </main>
     </div>
   );
 }

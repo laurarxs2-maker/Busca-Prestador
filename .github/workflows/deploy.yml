@@ -33,7 +33,6 @@ jobs:
         env:
           VITE_SHEETS_API_KEY: ${{ secrets.VITE_SHEETS_API_KEY }}
           VITE_SHEETS_ID: ${{ secrets.VITE_SHEETS_ID }}
-          VITE_SHEETS_WEBAPP_URL: ${{ secrets.VITE_SHEETS_WEBAPP_URL }}
 
       # Copia o build para docs/ na branch main (GitHub Pages publica essa pasta).
       - name: Publish build to docs/
