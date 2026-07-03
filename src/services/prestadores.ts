@@ -41,7 +41,7 @@ export async function getPrestadores(): Promise<Prestador[]> {
   // Em produção, não usar mock silenciosamente — força configurar a API key no deploy.
   if (import.meta.env.PROD) {
     throw new Error(
-      'Planilha não configurada: adicione VITE_SHEETS_API_KEY nos Secrets do GitHub e rode o deploy novamente.',
+      'Planilha não configurada: adicione VITE_SHEETS_API_KEY e VITE_SHEETS_ID nos Secrets do GitHub e rode o deploy novamente.',
     );
   }
 

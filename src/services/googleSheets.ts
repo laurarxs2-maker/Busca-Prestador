@@ -1,17 +1,16 @@
 import type { PrestadorRaw } from '../types/prestador';
-import { SHEETS_ID as DEFAULT_SHEET_ID } from '../config/sheets';
 
-const API_KEY = import.meta.env.VITE_SHEETS_API_KEY;
-const SHEET_ID = import.meta.env.VITE_SHEETS_ID || DEFAULT_SHEET_ID;
+const API_KEY = import.meta.env.VITE_SHEETS_API_KEY?.trim();
+const SHEET_ID = import.meta.env.VITE_SHEETS_ID?.trim();
 const TAB = import.meta.env.VITE_SHEETS_TAB?.trim();
 
 // Lê da linha 2 em diante (a linha 1 é o cabeçalho) até a coluna H.
 // Sem nome de aba, a API usa a primeira aba — evita problemas com acentos (ex.: "Página1").
 const RANGE = TAB ? `${TAB}!A2:H` : 'A2:H';
 
-/** Indica se a chave da API está presente (obrigatória para ler a planilha). */
+/** Indica se chave e ID da planilha estão presentes (obrigatórios para ler). */
 export function isSheetsConfigured(): boolean {
-  return Boolean(API_KEY);
+  return Boolean(API_KEY && SHEET_ID);
 }
 
 interface SheetsValuesResponse {
